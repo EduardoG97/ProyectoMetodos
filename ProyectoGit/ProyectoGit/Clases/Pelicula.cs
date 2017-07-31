@@ -24,5 +24,9 @@ namespace ProyectoGit.Clases
             DataTable pelicula = new DataTable();
             return pelicula;
         }
+        public void ReproducirPelicula()
+        {
+
+        }
     }
 }
