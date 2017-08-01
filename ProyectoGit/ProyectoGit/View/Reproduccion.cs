@@ -12,9 +12,17 @@ namespace ProyectoGit.View
 {
     public partial class Reproduccion : Form
     {
-        public Reproduccion()
+        string direccion;
+        public Reproduccion(string direccion)
         {
             InitializeComponent();
+            this.direccion = direccion;
+        }
+
+        private void Reproduccion_Load(object sender, EventArgs e)
+        {
+            //"C:\Users\kjc j k\Desktop\Peliculas\
+            axWindowsMediaPlayer1.URL = (direccion);
         }
     }
 }

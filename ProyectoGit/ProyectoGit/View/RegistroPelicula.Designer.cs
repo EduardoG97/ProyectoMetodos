@@ -1,6 +1,6 @@
 ﻿namespace ProyectoGit
 {
-    partial class Login
+    partial class RegistroPelicula
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,18 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fecha = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.precio = new System.Windows.Forms.TextBox();
+            this.portada = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.descripccion = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.portada)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,12 +66,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Precio";
             // 
-            // dateTimePicker1
+            // fecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(167, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(80, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.fecha.Location = new System.Drawing.Point(167, 150);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(80, 20);
+            this.fecha.TabIndex = 2;
             // 
             // label3
             // 
@@ -87,27 +91,27 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Portada";
             // 
-            // textBox1
+            // nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 5;
+            this.nombre.Location = new System.Drawing.Point(167, 64);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(164, 20);
+            this.nombre.TabIndex = 5;
             // 
-            // textBox2
+            // precio
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 20);
-            this.textBox2.TabIndex = 6;
+            this.precio.Location = new System.Drawing.Point(167, 110);
+            this.precio.Name = "precio";
+            this.precio.Size = new System.Drawing.Size(164, 20);
+            this.precio.TabIndex = 6;
             // 
-            // pictureBox1
+            // portada
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(392, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 147);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.portada.Location = new System.Drawing.Point(392, 85);
+            this.portada.Name = "portada";
+            this.portada.Size = new System.Drawing.Size(117, 147);
+            this.portada.TabIndex = 7;
+            this.portada.TabStop = false;
             // 
             // button1
             // 
@@ -117,23 +121,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Elejir";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 196);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 199);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Calidad";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -152,29 +140,75 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Login
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(33, 234);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Seleccionar Pelicula";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(172, 229);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Seleccionar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "Peliculas";
+            // 
+            // descripccion
+            // 
+            this.descripccion.Location = new System.Drawing.Point(167, 196);
+            this.descripccion.Name = "descripccion";
+            this.descripccion.Size = new System.Drawing.Size(164, 20);
+            this.descripccion.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(32, 196);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Descripccion";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
+            // RegistroPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 340);
+            this.Controls.Add(this.descripccion);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.portada);
+            this.Controls.Add(this.precio);
+            this.Controls.Add(this.nombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.fecha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Login";
+            this.Name = "RegistroPelicula";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,17 +218,21 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fecha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.TextBox precio;
+        private System.Windows.Forms.PictureBox portada;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox descripccion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
 

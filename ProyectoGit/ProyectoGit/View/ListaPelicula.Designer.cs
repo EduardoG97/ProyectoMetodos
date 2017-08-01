@@ -37,10 +37,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 45);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(401, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(496, 227);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // label1
             // 
@@ -59,6 +60,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ListaPelicula
             // 
@@ -70,6 +72,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListaPelicula";
             this.Text = "ListaPelicula";
+            this.Load += new System.EventHandler(this.ListaPelicula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
