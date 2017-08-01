@@ -25,7 +25,7 @@ namespace ProyectoGit.View
             dataGridView1.DataSource=p.ListarPeliculas();
             dataGridView1.Columns[0].Visible = false;
             //dataGridView1.Columns[4].Visible = false;
-            //dataGridView1.Columns[6].Visible = false;
+            //dataGridView1.Columns[6].Visible = false;ssss
         }
 
         private void button1_Click(object sender, EventArgs e)
