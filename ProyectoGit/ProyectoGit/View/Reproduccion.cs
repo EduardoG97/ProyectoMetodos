@@ -23,6 +23,12 @@ namespace ProyectoGit.View
         {
             //"C:\Users\kjc j k\Desktop\Peliculas\
             axWindowsMediaPlayer1.URL = (direccion);
+
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

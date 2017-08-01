@@ -30,13 +30,13 @@ namespace ProyectoGit.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RegistroPelicula r = new RegistroPelicula();
+            this.Hide();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int pos = dataGridView1.CurrentRow.Index;
-            Reproduccion re = new Reproduccion(dataGridView1[6,pos].Value.ToString());
+            Reproduccion re = new Reproduccion(dataGridView1[7,pos].Value.ToString());
             re.Show();
         }
     }
